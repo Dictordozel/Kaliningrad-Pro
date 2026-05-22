@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script defer src="./alpine.js"></script>
+    <script defer src="./browser@4.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    @font-face {
+        font-family: 'Skolar';
+        src: url('/fonts/Skolar-Regular.ttf') format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Ubuntu';
+        src: url('/fonts/UbuntuMono-Regular.ttf') format('truetype');
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'BebasNeue';
+        src: url('/fonts/bebasneuecyrillic.ttf') format('truetype');
+        font-style: normal;
+    }
+
+    body {
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    .section {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .title-s {
+        font-family: 'Skolar', sans-serif;
+        font-size: 8rem;
+        font-weight: 900;
+    }
+    .title-b {
+        display: flex;
+        font-family: 'BebasNeue', sans-serif;
+        font-size: 132px;
+        font-weight: bolder;
+        line-height: 132px;
+    }
+    .subtitle {
+        font-family: 'Ubuntu';
+        font-size: 2rem;
+        font-weight: bold;
+    }
+</style>
+
+<body x-data="getData()">
+    <div class="flex flex-col text-neutral-100">
+        <section class="bg-neutral-800 min-h-[90vh]">
+            <div class="section py-20 flex flex-col w-full gap-10">
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center justify-between uppercase text-neutral-100">
+                        <p>Сразу о главном</p>
+                        <p>Калининград 2026</p>
+                    </div>
+                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-500"></span></div>
+                <div>
+                    <span id="title-1" class="title-b">Сразу про</span>
+                    <span id="title-1.1" class="title-b">искусственный</span>
+                    <span id="title-1.2" class="title-b">интеллект.</span>
+                </div>
+
+                <div class="subtitle text-amber-200">
+                    <p>С ИИ и без ИИ —</p>
+                    <p>25 лет опыта.</p>
+                </div>
+
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-10 text-neutral-500">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                </svg>
+                <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-500"></span>
+                <div class="flex gap-10">
+                    <p id="sub-1" class="w-full">Если хотите быстро открыть как статическую страницу через локальный сервер</p>
+                    <p id="sub-2" class="w-full">Если хотите быстро открыть как статическую страницу через локальный сервер</p>
+                </div>
+                <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-500"></span>
+            </div>
+        </section>
+
+        <section class="bg-amber-200 min-h-[90vh]">
+            <div class="section py-20 flex flex-col w-full gap-10">
+
+            </div>
+        </section>
+
+        <section class="bg-blue-400 min-h-[90vh]">
+            <div class="section py-10 flex flex-col w-full h-screen gap-10 justify-between">
+                <h2 id="title-2" class="title-b text-neutral-50">Formatting Data</h2>
+                <!--            <p id="sub-1">Если хотите быстро открыть как статическую страницу через локальный сервер</p>-->
+                <!--            <p id="sub-2">Если хотите быстро открыть как статическую страницу через локальный сервер</p>-->
+                <p class="link">Если хотите быстро открыть как статическую страницу через локальный сервер</p>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25" />
+                </svg>
+                <div class="flex flex-col gap-8">
+                    <a class="link self-start pb-2 border-b border-neutral-50" href="#">Текст Ссылки</a>
+                    <button class="button self-start px-6 py-2 border border-neutral-50 cursor-pointer">Текст Кнопки
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script>
+        function getData() {
+            return {
+                defaultGlitchCharset: '#%&?/\\*_+',
+                defaultIntensity: 0.3,
+                defaultHoverInterval: 80,
+                glitchItems: {
+                    'title-1': {
+                        mode: 'random',
+                        minDelay: 1000,
+                        maxDelay: 5000,
+                        glitchDuration: 220,
+                        intensity: 0.15,
+                        glitchCharset: '#'
+                    },
+                    'title-1.1': {
+                        mode: 'random',
+                        minDelay: 1000,
+                        maxDelay: 5000,
+                        glitchDuration: 220,
+                        intensity: 0.15,
+                        glitchCharset: '#'
+                    },
+                    'title-1.2': {
+                        mode: 'random',
+                        minDelay: 1000,
+                        maxDelay: 5000,
+                        glitchDuration: 220,
+                        intensity: 0.15,
+                        glitchCharset: '#'
+                    },
+                    'sub-1': {
+                        mode: 'alt',
+                        altTexts: [
+                            'Если хотите быстро открыть как статическую страницу через локальный [ S E X ]',
+                            'Если [ S E X ] быстро открыть как статическую страницу через локальный сервер',
+                            'Если хотите быстро открыть как [ S E X ] страницу через локальный сервер',
+                        ],
+                        minDelay: 300,
+                        maxDelay: 1000,
+                        glitchDuration: 180,
+                        intensity: 0.5,
+                        glitchCharset: '%$#+'
+                    },
+                    'sub-2': {
+                        mode: 'random',
+                        minDelay: 1000,
+                        maxDelay: 3000,
+                        glitchDuration: 180,
+                        intensity: 0.5,
+                        glitchCharset: '#',
+                        textColor: null,
+                    },
+                    'title-2': {
+                        mode: 'alt',
+                        altTexts: ['F u c k i n g Data'],
+                        minDelay: 500,
+                        maxDelay: 5000,
+                        glitchDuration: 220,
+                    },
+                    'link': {
+                        type: 'hover',
+                        intensity: 0.4,
+                        glitchCharset: '#%&?',
+                        hoverInterval: 80,
+                    },
+                    'button': {
+                        type: 'hover',
+                        intensity: 0.4,
+                        glitchCharset: '#%&?',
+                        hoverInterval: 80,
+                    }
+                },
+                instances: {},
+                hoverInstances: [],
+
+                init() {
+                    Object.entries(this.glitchItems).forEach(([key, rawConfig]) => {
+                        if (rawConfig.type === 'hover') {
+                            this.initHoverItems(key, rawConfig)
+                            return
+                        }
+
+                        const el = document.getElementById(key)
+
+                        if (!el) {
+                            return
+                        }
+
+                        const originalText = el.textContent ?? ''
+                        const config = this.normalizeConfig(rawConfig, originalText)
+
+                        this.instances[key] = {
+                            id: key,
+                            el,
+                            config,
+                            originalText,
+                            startTimeoutId: null,
+                            restoreTimeoutId: null
+                        }
+
+                        el.textContent = originalText
+                        this.scheduleGlitch(key)
+                    })
+                },
+
+                destroy() {
+                    Object.values(this.instances).forEach(instance => {
+                        clearTimeout(instance.startTimeoutId)
+                        clearTimeout(instance.restoreTimeoutId)
+                        instance.el.textContent = instance.originalText
+                    })
+                    this.hoverInstances.forEach(hi => {
+                        clearInterval(hi.intervalId)
+                        hi.el.removeEventListener('mouseenter', hi.onEnter)
+                        hi.el.removeEventListener('mouseleave', hi.onLeave)
+                        hi.el.removeEventListener('mousedown', hi.onLeave)
+                        hi.el.textContent = hi.originalText
+                    })
+                    this.hoverInstances = []
+                },
+
+                initHoverItems(key, rawConfig) {
+                    const intensity = this.normalizeIntensity(rawConfig.intensity)
+                    const charset = this.resolveCharset(rawConfig.glitchCharset)
+                    const interval = this.toPositiveNumber(rawConfig.hoverInterval, this.defaultHoverInterval)
+
+                    document.querySelectorAll('.' + key).forEach(el => {
+                        const originalText = el.textContent ?? ''
+                        let intervalId = null
+
+                        const onEnter = () => {
+                            if (intervalId) return
+                            intervalId = setInterval(() => {
+                                el.textContent = this.buildGlitchText(originalText, charset, intensity)
+                            }, interval)
+                        }
+
+                        const onLeave = () => {
+                            clearInterval(intervalId)
+                            intervalId = null
+                            el.textContent = originalText
+                        }
+
+                        el.addEventListener('mouseenter', onEnter)
+                        el.addEventListener('mouseleave', onLeave)
+                        el.addEventListener('mousedown', onLeave)
+
+                        this.hoverInstances.push({ el, originalText, intervalId: null, onEnter, onLeave })
+                    })
+                },
+
+                normalizeConfig(config = {}, originalText = '') {
+                    const minDelay = this.toPositiveNumber(config.minDelay, 10000)
+                    const maxDelay = Math.max(minDelay, this.toPositiveNumber(config.maxDelay, 30000))
+                    const mode = config.mode === 'alt' ? 'alt' : 'random'
+
+                    const normalizedAltTexts = Array.isArray(config.altTexts)
+                        ? config.altTexts.filter(text => typeof text === 'string' && text.length > 0)
+                        : []
+
+                    const commonConfig = {
+                        mode,
+                        minDelay,
+                        maxDelay,
+                        glitchDuration: this.toPositiveNumber(config.glitchDuration, 220)
+                    }
+
+                    if (mode === 'alt') {
+                        return {
+                            ...commonConfig,
+                            altTexts: normalizedAltTexts,
+                            altText: typeof config.altText === 'string' && config.altText.length > 0
+                                ? config.altText
+                                : originalText
+                        }
+                    }
+
+                    return {
+                        ...commonConfig,
+                        intensity: this.normalizeIntensity(config.intensity),
+                        glitchCharset: this.resolveCharset(config.glitchCharset)
+                    }
+                },
+
+                toPositiveNumber(value, fallback) {
+                    const number = Number(value)
+
+                    return Number.isFinite(number) && number > 0 ? number : fallback
+                },
+
+                normalizeIntensity(value) {
+                    const number = Number(value)
+
+                    if (!Number.isFinite(number)) {
+                        return this.defaultIntensity
+                    }
+
+                    return Math.min(Math.max(number, 0.05), 1)
+                },
+
+                resolveCharset(charset) {
+                    return typeof charset === 'string' && charset.length > 0
+                        ? charset
+                        : this.defaultGlitchCharset
+                },
+
+                scheduleGlitch(id) {
+                    const instance = this.instances[id]
+
+                    if (!instance) {
+                        return
+                    }
+
+                    clearTimeout(instance.startTimeoutId)
+
+                    instance.startTimeoutId = setTimeout(() => {
+                        this.runGlitch(id)
+                    }, this.randomBetween(instance.config.minDelay, instance.config.maxDelay))
+                },
+
+                runGlitch(id) {
+                    const instance = this.instances[id]
+
+                    if (!instance) {
+                        return
+                    }
+
+                    clearTimeout(instance.restoreTimeoutId)
+
+                    if (instance.config.mode === 'alt') {
+                        instance.el.textContent = this.pickAltText(instance.config)
+                    } else {
+                        instance.el.textContent = this.buildGlitchText(
+                            instance.originalText,
+                            instance.config.glitchCharset,
+                            instance.config.intensity
+                        )
+                    }
+
+                    instance.restoreTimeoutId = setTimeout(() => {
+                        instance.el.textContent = instance.originalText
+                        this.scheduleGlitch(id)
+                    }, instance.config.glitchDuration)
+                },
+
+                pickAltText(config) {
+                    if (config.altTexts.length > 0) {
+                        return this.pickRandom(config.altTexts)
+                    }
+
+                    return config.altText
+                },
+
+                buildGlitchText(originalText, charset, intensity) {
+                    const replacementChars = Array.from(charset)
+                    const characters = Array.from(originalText)
+                    const mutableIndexes = characters
+                        .map((character, index) => /\s/.test(character) ? null : index)
+                        .filter(index => index !== null)
+
+                    if (mutableIndexes.length === 0) {
+                        return originalText
+                    }
+
+                    const mutationCount = Math.max(1, Math.round(mutableIndexes.length * intensity))
+                    const selectedIndexes = new Set()
+
+                    while (selectedIndexes.size < Math.min(mutationCount, mutableIndexes.length)) {
+                        selectedIndexes.add(mutableIndexes[Math.floor(Math.random() * mutableIndexes.length)])
+                    }
+
+                    const glitchedCharacters = []
+
+                    characters.forEach((character, index) => {
+                        if (!selectedIndexes.has(index)) {
+                            glitchedCharacters.push(character)
+                            return
+                        }
+
+                        glitchedCharacters.push(this.pickRandom(replacementChars))
+                    })
+
+                    return glitchedCharacters.join('')
+                },
+
+                pickRandom(items) {
+                    return items[Math.floor(Math.random() * items.length)]
+                },
+
+                randomBetween(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>
