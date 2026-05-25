@@ -98,7 +98,7 @@
 <!--                    <span class="w-full" :style="{backgroundColor: color}"></span>-->
 <!--                </template>-->
 <!--            </div>-->
-            <nav class="relative z-10 w-[60%] mx-auto py-4 flex items-center gap-10">
+            <nav class="relative z-10 w-[60%] mx-auto py-4 flex items-center gap-10 text-sm underline underline-offset-4">
                 <a href="#main" class="link cursor-pointer">О ГЛАВНОМ</a>
                 <a href="#stack" class="link cursor-pointer">СТЕК</a>
                 <a href="#process" class="link cursor-pointer">ПРОЦЕСС</a>
@@ -109,13 +109,6 @@
             <img src="./images/img2.png" alt="img2" class="absolute left-0 top-15 z-0 opacity-30 h-[49%] w-auto">
 <!--            <img src="./images/img2.png" alt="img2" class="absolute left-[20%] top-40 z-0 opacity-30 h-[49%]">-->
             <div class="relative section py-20 flex flex-col w-full gap-20 z-10">
-<!--                <div class="flex flex-col gap-2">-->
-<!--                    <div class="flex items-center justify-between uppercase text-neutral-300 text-sm">-->
-<!--                        <p>О главном</p>-->
-<!--                        <p>Калининград 2026</p>-->
-<!--                    </div>-->
-<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-100"></span>-->
-<!--                </div>-->
                 <div class="flex items-start justify-between">
                     <h1>
                         <span id="title-1" class="title-b">Сразу pro</span>
@@ -186,16 +179,6 @@
                 >
             </div>
 
-<!--            <div class="relative z-20 grid grid-cols-8 gap-6">-->
-<!--                <p class="col-start-5 col-span-4 skolar font-bold text-4xl text-neutral-100 p-6 bg-neutral-800">-->
-<!--                    С ИИ —</span>-->
-<!--                    теоретически и-->
-<!--                    <span class="text-5xl">практически</span> (на 95%) — <span class="text-5xl">нет границ</span>:-->
-<!--                    например, <span class="text-5xl">можно создать</span> собственный-->
-<!--                    YouTube, Midjourney или Rutracker.-->
-<!--                </p>-->
-<!--            </div>-->
-<!--             <div class="relative z-20 grid grid-cols-8 gap-6 font-[BebasNeue]">-->
              <div class="relative z-20 grid grid-cols-8 gap-6 font-[BebasNeue]">
                  <p class="col-start-5 col-span-3 text-5xl leading-12 text-neutral-800 p-10 bg-neutral-100">
                      «звездное небо над головой или моральный закон внутри тебя»<br>
@@ -209,42 +192,36 @@
                 <div class="flex flex-col">
                     <div class="flex items-center justify-between uppercase text-sm ">
                         <p>Инструментарий</p>
-                        <p>[ подтверждение выбора ]</p>
+                        <p>[ подтверждение ]</p>
                     </div>
                     <span class="w-full border-b border-dashed border-[#55FFFF] mt-2"></span>
                 </div>
-                <div class="flex items-start justify-between">
+<!--                <div class="flex items-start justify-between">-->
 
-                        <h1 class="relative flex flex-col w-full text-[#55FFFF]">
-                            <span class=" w-full title-b !text-[22rem] !leading-[18.5rem] opacity-70">Стек</span>
-                            <span class="absolute bottom-0 right-0 title-b bg-[#0000ff]">технологий.</span>
-                        </h1>
-                </div>
-                <div class="flex items-end justify-between">
-                    <div class="ubuntu text-[1.5rem] w-1/2 font-bold flex flex-col gap-2">
-                        <span class="self-start py-1 border-b border-dashed border-[#55FFFF]">Опыт:</span>
-                        <p>Python, JavaScript (TS), Rust, C++, PHP, TurboPascal. Java, CUDA, Golang, Ruby, Swift. <br>Десятки других технологий.</p>
+<!--                        <h1 class="relative flex flex-col w-full text-[#55FFFF]">-->
+<!--                            <span class=" w-full title-b !text-[22rem] !leading-[18.5rem] opacity-70">Стек</span>-->
+<!--                            <span class="absolute bottom-0 right-0 title-b bg-[#0000ff]">технологий.</span>-->
+<!--                        </h1>-->
+<!--                </div>-->
+                <div class="flex flex-col gap-2">
+                    <div class="grid grid-cols-8 gap-10 text-[#55FFFF] font-bold">
+                        <span class="block col-span-2 font-[BebasNeue] text-[24rem] leading-[0.8]">С</span>
+                        <span class="block col-span-2 font-[BebasNeue] text-[24rem] leading-[0.8]">Т</span>
+                        <span class="block col-span-2 font-[BebasNeue] text-[24rem] leading-[0.8]">Е</span>
+                        <span class="block col-span-2 font-[BebasNeue] text-[24rem] leading-[0.8]">К</span>
                     </div>
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-10 shrink-0">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
-                    </svg>
+<!--                    <p class="font-[BebasNeue] text-[#55FFFF] text-[8rem] font-bold leading-none">технологий</p>-->
+                </div>
+                <div class="inter font-light flex items-end justify-between">
+                    <div class="grid grid-cols-8 gap-x-10 text-[1.5rem]">
+                        <p class="col-start-1 col-end-6 bg-[#55FFFF] text-[#0000ff] p-6">Python, JavaScript (TS), Rust, C++, PHP, TurboPascal. Java, CUDA, Golang, Ruby, Swift. Десятки других технологий.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-10 shrink-0 col-start-6 col-span-3 self-end justify-self-end">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
+                        </svg>
+                    </div>
                 </div>
 
                 <div class="flex flex-col gap-6">
-<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-[#55FFFF]"></span>-->
-                    <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
-                    <div class="flex gap-10">
-                        <div class="w-full flex flex-col">
-                            <span class="font-bold uppercase">Языки</span>
-                            <p>Python &bull; JS/TS &bull; Rust &bull; C++ &bull; PHP &bull; TurboPascal</p>
-                        </div>
-                        <div class="w-full flex flex-col">
-                            <span class="font-bold uppercase">Ниже</span>
-                            <p>Java &bull; CUDA &bull; Go &bull; Ruby &bull; Swift</p>
-                        </div>
-                    </div>
-<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-[#55FFFF]"></span>-->
                     <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
                     <div class="flex gap-10">
                         <div class="w-full flex flex-col">
@@ -256,7 +233,6 @@
                             <p>FastAPI &bull; Django &bull; Laravel &bull; Actix &bull; Node</p>
                         </div>
                     </div>
-<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-[#55FFFF]"></span>-->
                     <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
                     <div class="flex gap-10">
                         <div class="w-full flex flex-col">
@@ -293,29 +269,30 @@
                         </div>
                     </div>
                     <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
-                </div>
-                <div class="grid grid-cols-4 gap-10">
+                    <div class="grid grid-cols-4 gap-10">
 
-                    <p class="font-bold uppercase text-[#FF5555]">не профиль</p>
+                    <p class="font-bold uppercase text-[#FF5555] border-top border-[#55ffff]">не профиль</p>
 
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 border-top border-[#55ffff]">
                         <p class="font-bold uppercase">Битрикс-партнёры с 2006 года —</p>
                         <p>поэтому только очень серьёзные проекты на нём.</p>
                     </div>
 
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 border-top border-[#55ffff]">
                         <p class="font-bold uppercase">1С, SEO / SMM —</p>
-                        <p>не профиль: знаем, но не занимаемся. Полно специализированных компаний в городе, которые
+                        <p>не профиль: знаем, но не занимаемся. Полно компаний в городе, которые
                             занимаются этим лучше нас.</p>
                     </div>
-                    <div class="flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 border-top border-[#55ffff]">
                         <p class="font-bold uppercase">Не делаем сайты ради самих сайтов.</p>
                         <p>Делаем продукты, платформы и инструменты для решения задач. Некоторые могут выглядеть как
                             сайты в итоге.</p>
                     </div>
                 </div>
+                </div>
+
                 <div class="flex flex-col gap-2">
-                    <span class="w-full border-b border-dashed border-[#55FFFF] mt-2"></span>
+                    <span class="w-full border-b border-dashed border-[#55ffff] mt-2"></span>
                     <div class="flex items-center justify-between uppercase text-sm ">
                         <p>HTML · Tailwind v4 · Alpine</p>
                         <p>Сложность выполнения: Просто</p>
@@ -337,7 +314,7 @@
         </section>
 
         <section id="process" class="bg-amber-300 min-h-[100vh] text-neutral-800">
-            <div class="relative section py-20 flex flex-col w-full gap-10 z-10">
+            <div class="relative section py-20 flex flex-col w-full gap-20 z-10">
                 <div class="flex flex-col gap-2">
                     <div class="flex items-center justify-between uppercase text-neutral-800 text-sm">
                         <p>О главном</p>
@@ -348,11 +325,7 @@
                 <div class="flex flex-col gap-20">
                     <h1 class="self-end bebas text-[16rem] leading-[12rem] font-bold"><span class="text-neutral-100">* </span>PROЦЕ2С.</h1>
                     <div class="grid grid-cols-8 gap-6">
-<!--                        <p class="col-start-4 col-span-5 skolar font-bold text-4xl"><span class="text-5xl">С ИИ —</span> теоретически и-->
-<!--                            <span class="text-5xl">практически</span> (на 95%) — <span class="text-5xl">нет границ</span>: например, <span class="text-5xl">можно создать</span> собственный-->
-<!--                             YouTube, Midjourney или Rutracker.-->
-<!--                        </p>-->
-                        <p class="col-start-4 col-span-5 inter font-bold text-4xl">
+                        <p class="col-start-4 col-span-5 inter font-bold text-4xl pl-6 border-l-4 border-neutral-800">
                             Возьмёмся за любой проект; если не сможем — честно скажем и бесплатно посоветуем, как быть.
                         </p>
                     </div>
