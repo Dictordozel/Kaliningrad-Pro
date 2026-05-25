@@ -10,6 +10,12 @@
 
 <style>
     @font-face {
+        font-family: 'Inter';
+        src: url('/fonts/InterVariable.woff2') format('woff2');
+        font-weight: 100 900;
+        font-style: normal;
+    }
+    @font-face {
         font-family: 'Skolar';
         src: url('/fonts/Skolar-Regular.ttf') format('truetype');
         font-weight: 100 900;
@@ -28,8 +34,17 @@
         font-style: normal;
     }
 
-    body {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .ubuntu {
         font-family: 'Ubuntu', sans-serif;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        letter-spacing: 0.1rem;
     }
 
     .section {
@@ -45,72 +60,632 @@
     .title-b {
         display: flex;
         font-family: 'BebasNeue', sans-serif;
-        font-size: 132px;
+        font-size: 8rem;
         font-weight: bolder;
-        line-height: 132px;
+        line-height: 8rem;
     }
-    .subtitle {
-        font-family: 'Ubuntu';
-        font-size: 2rem;
-        font-weight: bold;
+    .bebas {
+        font-family: 'BebasNeue', sans-serif;
+    }
+    .ubuntu {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .skolar {
+        font-family: 'Skolar', sans-serif;
+    }
+    .inter {
+        font-family: 'Inter', sans-serif;
     }
 </style>
 
 <body x-data="getData()">
-    <div class="flex flex-col text-neutral-100">
-        <section class="bg-neutral-800 min-h-[90vh]">
-            <div class="section py-20 flex flex-col w-full gap-10">
+    <div class="flex flex-col" id="main">
+        <div class="relative sticky z-100 top-0 full bg-neutral-800 border-b border-neutral-100 text-neutral-100">
+<!--            <div class="absolute inset-0 flex">-->
+<!--                <template x-for="color in [-->
+<!--                    '#0000ff',-->
+<!--                    '#0000aa',-->
+<!--                    '#008080',-->
+<!--                    '#f0f0f0',-->
+<!--                    '#2f80ed',-->
+<!--                    '#ff7a59',-->
+<!--                    '#fafafa',-->
+<!--                    '#e7e247',-->
+<!--                    '#711313',-->
+<!--                    '#d0000d'-->
+<!--                ]"-->
+<!--                >-->
+<!--                    <span class="w-full" :style="{backgroundColor: color}"></span>-->
+<!--                </template>-->
+<!--            </div>-->
+            <nav class="relative z-10 w-[60%] mx-auto py-4 flex items-center gap-10">
+                <a href="#main" class="link cursor-pointer">О ГЛАВНОМ</a>
+                <a href="#stack" class="link cursor-pointer">СТЕК</a>
+                <a href="#process" class="link cursor-pointer">ПРОЦЕСС</a>
+                <a href="#contacts" class="link cursor-pointer">КОНТАКТЫ</a>
+            </nav>
+        </div>
+        <main class="relative bg-neutral-800 min-h-[90vh] text-neutral-100">
+            <img src="./images/img2.png" alt="img2" class="absolute left-0 top-15 z-0 opacity-30 h-[49%] w-auto">
+<!--            <img src="./images/img2.png" alt="img2" class="absolute left-[20%] top-40 z-0 opacity-30 h-[49%]">-->
+            <div class="relative section py-20 flex flex-col w-full gap-20 z-10">
+<!--                <div class="flex flex-col gap-2">-->
+<!--                    <div class="flex items-center justify-between uppercase text-neutral-300 text-sm">-->
+<!--                        <p>О главном</p>-->
+<!--                        <p>Калининград 2026</p>-->
+<!--                    </div>-->
+<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-100"></span>-->
+<!--                </div>-->
+                <div class="flex items-start justify-between">
+                    <h1>
+                        <span id="title-1" class="title-b">Сразу pro</span>
+                        <span id="title-1.1" class="title-b text-amber-200">иску2стве2ный</span>
+                        <span id="title-1.2" class="title-b">#инте2лект.</span>
+                    </h1>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                         stroke="currentColor" class="size-10 text-amber-200">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"/>
+                    </svg>
+                </div>
+
+                <div class="flex items-end justify-between">
+                    <h2 class="skolar text-[4rem] leading-[4rem] font-bold opacity-50">
+                        <p>С ИИ и без ИИ —</p>
+                        <p>25 лет опыта.</p>
+                    </h2>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
+                         stroke="currentColor" class="size-10">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"/>
+                    </svg>
+                </div>
+                <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-100"></span>
+
+
+<!--                <p id="sub-1" class="w-full text-xl font-bold">Если хотите быстро открыть как статическую страницу через локальный сервер</p>-->
+
+                <div class="flex gap-10 items-end">
+                    <p class="w-full">
+                        <span class="text-amber-200">ИИ помогает, ускоряет, а не заменяет. </span>Ориентируемся в самых сложных контекстах. IT-разработка — наша основная текущая специализация. <br>Есть опыт в издательском деле, маркетинге, рекламе, полиграфии, 2D/3D, видеопроизводстве. Также в архитектуре и интерьерном дизайне, металлообработке и схемотехнике.
+                    </p>
+                    <p class="w-full">
+                        Именно опыт реальных людей с десятками завершённых проектов позволяет не «вибе-кодить» с ChatGPT, а разрабатывать стратегию и придерживаться выбранной архитектуры.
+                    </p>
+                </div>
+
+                <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-100"></span>
+
+                <div class="grid md:grid-cols-4 gap-10">
+                    <p class="w-full first-letter:text-5xl first-letter:float-left first-letter:mr-3 first-letter:bold first-letter:text-amber-200">1 Ориентируемся в самых сложных контекстах.</p>
+                    <p class="w-full first-letter:text-5xl first-letter:float-left first-letter:mr-3 first-letter:bold first-letter:text-amber-200">2 IT-разработка — наша основная текущая специализация.</p>
+                    <p class="w-full first-letter:text-5xl first-letter:float-left first-letter:mr-3 first-letter:bold first-letter:text-amber-200">3 Есть опыт в издательском деле, маркетинге, рекламе, полиграфии, 2D/3D, видеопроизводстве.</p>
+                    <p class="w-full first-letter:text-5xl first-letter:float-left first-letter:mr-3 first-letter:bold first-letter:text-amber-200">4 Также в архитектуре и интерьерном дизайне, металлообработке и схемотехнике.</p>
+                </div>
                 <div class="flex flex-col gap-2">
-                    <div class="flex items-center justify-between uppercase text-neutral-100">
-                        <p>Сразу о главном</p>
+                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-100"></span>
+                    <div class="flex items-center justify-between uppercase text-neutral-300 text-sm">
+                        <p>HTML · Tailwind v4 · Alpine</p>
+                        <p>PyCharm</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+         <section class="relative bg-neutral-800 min-h-[80vh] h-[80vh] flex items-center overflow-hidden">
+
+            <div class="absolute inset-0 bg-[url('./images/bg4.png')] bg-cover bg-bottom bg-no-repeat">
+            </div>
+
+            <div class="absolute inset-0 z-10">
+                <img
+                        src="./images/pers-04.png"
+                        class="w-full h-full object-contain object-left-bottom"
+                        alt=""
+                >
+            </div>
+
+<!--            <div class="relative z-20 grid grid-cols-8 gap-6">-->
+<!--                <p class="col-start-5 col-span-4 skolar font-bold text-4xl text-neutral-100 p-6 bg-neutral-800">-->
+<!--                    С ИИ —</span>-->
+<!--                    теоретически и-->
+<!--                    <span class="text-5xl">практически</span> (на 95%) — <span class="text-5xl">нет границ</span>:-->
+<!--                    например, <span class="text-5xl">можно создать</span> собственный-->
+<!--                    YouTube, Midjourney или Rutracker.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--             <div class="relative z-20 grid grid-cols-8 gap-6 font-[BebasNeue]">-->
+             <div class="relative z-20 grid grid-cols-8 gap-6 font-[BebasNeue]">
+                 <p class="col-start-5 col-span-3 text-5xl leading-12 text-neutral-800 p-10 bg-neutral-100">
+                     «звездное небо над головой или моральный закон внутри тебя»<br>
+                 </p>
+             </div>
+
+        </section>
+
+        <section id="stack" class="bg-[#0000ff] min-h-[90vh] text-[#55FFFF]">
+            <div class="relative section py-20 flex flex-col w-full gap-20 z-10">
+                <div class="flex flex-col">
+                    <div class="flex items-center justify-between uppercase text-sm ">
+                        <p>Инструментарий</p>
+                        <p>[ подтверждение выбора ]</p>
+                    </div>
+                    <span class="w-full border-b border-dashed border-[#55FFFF] mt-2"></span>
+                </div>
+                <div class="flex items-start justify-between">
+
+                        <h1 class="relative flex flex-col w-full text-[#55FFFF]">
+                            <span class=" w-full title-b !text-[22rem] !leading-[18.5rem] opacity-70">Стек</span>
+                            <span class="absolute bottom-0 right-0 title-b bg-[#0000ff]">технологий.</span>
+                        </h1>
+                </div>
+                <div class="flex items-end justify-between">
+                    <div class="ubuntu text-[1.5rem] w-1/2 font-bold flex flex-col gap-2">
+                        <span class="self-start py-1 border-b border-dashed border-[#55FFFF]">Опыт:</span>
+                        <p>Python, JavaScript (TS), Rust, C++, PHP, TurboPascal. Java, CUDA, Golang, Ruby, Swift. <br>Десятки других технологий.</p>
+                    </div>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-10 shrink-0">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 4.5-15 15m0 0h11.25m-11.25 0V8.25" />
+                    </svg>
+                </div>
+
+                <div class="flex flex-col gap-6">
+<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-[#55FFFF]"></span>-->
+                    <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
+                    <div class="flex gap-10">
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">Языки</span>
+                            <p>Python &bull; JS/TS &bull; Rust &bull; C++ &bull; PHP &bull; TurboPascal</p>
+                        </div>
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">Ниже</span>
+                            <p>Java &bull; CUDA &bull; Go &bull; Ruby &bull; Swift</p>
+                        </div>
+                    </div>
+<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-[#55FFFF]"></span>-->
+                    <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
+                    <div class="flex gap-10">
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">Frontend</span>
+                            <p>React &bull; Vue &bull; Svelte &bull; Astro &bull; Next &bull; Nuxt</p>
+                        </div>
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">Backend</span>
+                            <p>FastAPI &bull; Django &bull; Laravel &bull; Actix &bull; Node</p>
+                        </div>
+                    </div>
+<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-[#55FFFF]"></span>-->
+                    <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
+                    <div class="flex gap-10">
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">Базы</span>
+                            <p>PostgreSQL &bull; MySQL &bull; Redis &bull; Mongo &bull; ClickHouse</p>
+                        </div>
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">DevOps</span>
+                            <p>Docker &bull; K8s &bull; Linux &bull; CI/CD &bull; мониторинг</p>
+                        </div>
+                    </div>
+<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-[#55FFFF]"></span>-->
+                    <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
+                    <div class="flex gap-10">
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">Инфра</span>
+                            <p>IaaS &bull; VM &bull; bare-metal — США, ЕС, Азия, РФ</p>
+                        </div>
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">Мобайл</span>
+                            <p>iOS &bull; Android — до MVP</p>
+                        </div>
+                    </div>
+<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-[#55FFFF]"></span>-->
+                    <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
+                    <div class="flex gap-10">
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">ИИ</span>
+                            <p>LLM &bull; MCP &bull; агенты &bull; своя инфра</p>
+                        </div>
+                        <div class="w-full flex flex-col">
+                            <span class="font-bold uppercase">Интеграции</span>
+                            <p>CRM &bull; ERP &bull; кастомные решения</p>
+                        </div>
+                    </div>
+                    <span class="w-full border-b border-dashed border-[#55FFFF]"></span>
+                </div>
+                <div class="grid grid-cols-4 gap-10">
+
+                    <p class="font-bold uppercase text-[#FF5555]">не профиль</p>
+
+                    <div class="flex flex-col gap-2">
+                        <p class="font-bold uppercase">Битрикс-партнёры с 2006 года —</p>
+                        <p>поэтому только очень серьёзные проекты на нём.</p>
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <p class="font-bold uppercase">1С, SEO / SMM —</p>
+                        <p>не профиль: знаем, но не занимаемся. Полно специализированных компаний в городе, которые
+                            занимаются этим лучше нас.</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <p class="font-bold uppercase">Не делаем сайты ради самих сайтов.</p>
+                        <p>Делаем продукты, платформы и инструменты для решения задач. Некоторые могут выглядеть как
+                            сайты в итоге.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="w-full border-b border-dashed border-[#55FFFF] mt-2"></span>
+                    <div class="flex items-center justify-between uppercase text-sm ">
+                        <p>HTML · Tailwind v4 · Alpine</p>
+                        <p>Сложность выполнения: Просто</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="relative bg-[#711313]">
+<!--            <div class="absolute inset-0 bg-[url('./images/bg1.png')] bg-cover bg-bottom bg-no-repeat"></div>-->
+            <img src="./images/pers-03.png" class="absolute top-0 right-0 h-full w-auto"/>
+            <div class="relative z-10 section py-20 flex flex-col w-full gap-10 z-10 text-neutral-100">
+                <span class="title-b tracking-wide">не в москве.</span>
+                <span class="title-b tracking-wide">не в минске.</span>
+                <span class="title-b tracking-wide text-amber-300">в калининграде.</span>
+            </div>
+
+        </section>
+
+        <section id="process" class="bg-amber-300 min-h-[100vh] text-neutral-800">
+            <div class="relative section py-20 flex flex-col w-full gap-10 z-10">
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center justify-between uppercase text-neutral-800 text-sm">
+                        <p>О главном</p>
                         <p>Калининград 2026</p>
                     </div>
-                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-500"></span></div>
-                <div>
-                    <span id="title-1" class="title-b">Сразу про</span>
-                    <span id="title-1.1" class="title-b">искусственный</span>
-                    <span id="title-1.2" class="title-b">интеллект.</span>
+                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-800"></span>
+                </div>
+                <div class="flex flex-col gap-20">
+                    <h1 class="self-end bebas text-[16rem] leading-[12rem] font-bold"><span class="text-neutral-100">* </span>PROЦЕ2С.</h1>
+                    <div class="grid grid-cols-8 gap-6">
+<!--                        <p class="col-start-4 col-span-5 skolar font-bold text-4xl"><span class="text-5xl">С ИИ —</span> теоретически и-->
+<!--                            <span class="text-5xl">практически</span> (на 95%) — <span class="text-5xl">нет границ</span>: например, <span class="text-5xl">можно создать</span> собственный-->
+<!--                             YouTube, Midjourney или Rutracker.-->
+<!--                        </p>-->
+                        <p class="col-start-4 col-span-5 inter font-bold text-4xl">
+                            Возьмёмся за любой проект; если не сможем — честно скажем и бесплатно посоветуем, как быть.
+                        </p>
+                    </div>
+                </div>
+                <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-800"></span>
+
+                <!-- ACORDEON -->
+                <div class="flex flex-col">
+                    <!--SECTION-01-->
+                    <div class="group flex flex-col w-full border-b border-neutral-800">
+                        <div class="relative flex items-center justify-between py-2">
+                            <div class="flex items-center gap-6">
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">01</span>
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="font-black">КОНСУЛЬТАЦИЯ № 1</p>
+                                    <p class="font-light">Бесплатно. ≈ 1 час суммарно.</p>
+                                </div>
+                            </div>
+
+                            <svg x-show="active_acc !== 'acc-01'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-01'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+
+                            <button @click="active_acc = active_acc === 'acc-01' ? null : 'acc-01'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-01'" class="w-full py-6 ">
+                            <p class="text-[1.25rem]">
+                                Просто — напишите нам в чат. Telegram или лично (в исключительных случаях).
+                                Обсуждение идеи, SWOT-анализ и предварительный выбор стека и архитектуры.
+                            </p>
+                        </div>
+                    </div>
+                    <!--SECTION-02-->
+                    <div class="group flex flex-col w-full border-b border-neutral-800">
+                        <div class="relative flex items-center justify-between py-2">
+                            <svg x-show="active_acc !== 'acc-02'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-02'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+                            <div class="flex items-center gap-6">
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="text-right font-black">ИССЛЕДОВАНИЕ</p>
+                                    <p class="text-right font-light">Актуализация инструментария.</p>
+                                </div>
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">02</span>
+                            </div>
+                            <button @click="active_acc = active_acc === 'acc-02' ? null : 'acc-02'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-02'" class="w-full py-6 ">
+                            <p class="text-[1.5rem]">
+                                Анализ требований, исследование технологий и инструментов, оценка рисков. Обновление списка предполагаемых для использования инструментов в соответствии с текущим состоянием — что-то могло устареть, что-то появилось или обновилось. Такова современная жизнь.
+                            </p>
+                        </div>
+                    </div>
+                    <!--SECTION-03-->
+                    <div class="group flex flex-col w-full border-b border-neutral-800">
+                        <div class="relative flex items-center justify-between py-2">
+                            <div class="flex items-center gap-6">
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">03</span>
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="font-black">ВЫБОР АРХИТЕКТУРЫ</p>
+                                    <p class="font-light">Создание PoC.</p>
+                                </div>
+                            </div>
+
+                            <svg x-show="active_acc !== 'acc-03'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-03'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+
+                            <button @click="active_acc = active_acc === 'acc-03' ? null : 'acc-03'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-03'" class="w-full py-6 ">
+                            <p class="text-[1.5rem]">
+                                Определение архитектуры проекта и создание PoC для проверки ключевых гипотез. Проверка технической реализуемости и выявление потенциальных проблем на раннем этапе.
+                            </p>
+                        </div>
+                    </div>
+                    <!--SECTION-04-->
+                    <div class="group flex flex-col w-full border-b border-neutral-800">
+                        <div class="relative flex items-center justify-between py-2">
+                            <svg x-show="active_acc !== 'acc-04'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-04'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+                            <div class="flex items-center gap-6">
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="text-right font-black">КОНСУЛЬТАЦИЯ № 2</p>
+                                    <p class="text-right font-light">Демонстрация PoC.</p>
+                                </div>
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">04</span>
+                            </div>
+                            <button @click="active_acc = active_acc === 'acc-04' ? null : 'acc-04'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-04'" class="w-full py-6 ">
+                            <p class="text-[1.5rem]">
+                                Принятие решений по доработке или продолжению разработки. Определение команды и стратегии разработки (SH / PM / PO / TL).
+                            </p>
+                        </div>
+                    </div>
+                    <!--SECTION-05-->
+                    <div class="group flex flex-col w-full border-b border-neutral-800">
+                        <div class="relative flex items-center justify-between py-2">
+                            <div class="flex items-center gap-6">
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">05</span>
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="font-black">РАЗРАБОТКА</p>
+                                    <p class="font-light">PoC → MVP.</p>
+                                </div>
+                            </div>
+
+                            <svg x-show="active_acc !== 'acc-05'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-05'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+
+                            <button @click="active_acc = active_acc === 'acc-05' ? null : 'acc-05'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-05'" class="w-full py-6 ">
+                            <p class="text-[1.5rem]">
+                                Тестирование ключевых функций и сбор обратной связи от пользователей. Итеративная доработка функционала на основе полученной обратной связи. Развёртывание backend в выбранной инфраструктуре, приближенной к prod.
+                            </p>
+                        </div>
+                    </div>
+                    <!--SECTION-06-->
+                    <div class="group flex flex-col w-full border-b border-neutral-800">
+                        <div class="relative flex items-center justify-between py-2">
+                            <svg x-show="active_acc !== 'acc-06'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-06'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+                            <div class="flex items-center gap-6">
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="text-right font-black">КОНСУЛЬТАЦИЯ № 3</p>
+                                    <p class="text-right font-light">Результаты MVP.</p>
+                                </div>
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">06</span>
+                            </div>
+                            <button @click="active_acc = active_acc === 'acc-06' ? null : 'acc-06'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-06'" class="w-full py-6 ">
+                            <p class="text-[1.5rem]">
+                                Обсуждение результатов разработки MVP, анализ обратной связи от пользователей и принятие решений по дальнейшему развитию проекта.
+                            </p>
+                        </div>
+                    </div>
+                    <!--SECTION-07-->
+                    <div class="group flex flex-col w-full border-b border-neutral-800">
+                        <div class="relative flex items-center justify-between py-2">
+                            <div class="flex items-center gap-6">
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">07</span>
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="font-black">CI / CD</p>
+                                    <p class="font-light">dev → staging → prod.</p>
+                                </div>
+                            </div>
+                            <svg x-show="active_acc !== 'acc-07'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-07'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+
+                            <button @click="active_acc = active_acc === 'acc-07' ? null : 'acc-07'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-07'" class="w-full py-6 ">
+                            <p class="text-[1.5rem]">
+                                Автоматизация сборки, тестирования и деплоя проекта на всех этапах разработки. Настройка мониторинга и логирования.
+                            </p>
+                        </div>
+                    </div>
+                    <!--SECTION-08-->
+                    <div class="group flex flex-col w-full border-b border-neutral-800">
+                        <div class="relative flex items-center justify-between py-2">
+                            <svg x-show="active_acc !== 'acc-08'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-08'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+                            <div class="flex items-center gap-6">
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="text-right font-black">РАЗРАБОТКА</p>
+                                    <p class="text-right font-light">MVP → alpha → beta → public.</p>
+                                </div>
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">08</span>
+                            </div>
+                            <button @click="active_acc = active_acc === 'acc-08' ? null : 'acc-08'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-08'" class="w-full py-6 ">
+                            <p class="text-[1.5rem]">
+                                Доработка автоматических тестов и документирования функционала кода. Запуск проекта.
+                            </p>
+                        </div>
+                    </div>
+                    <!--SECTION-09-->
+                    <div class="group flex flex-col w-full">
+                        <div class="relative flex items-center justify-between py-2">
+                            <div class="flex items-center gap-6">
+                                <span class="group-hover:text-neutral-100 bebas text-[6rem] leading-none font-bold transition">09</span>
+                                <div class="flex flex-col text-lg text-[1.5rem] font-bold">
+                                    <p class="font-black">ИТОГ</p>
+                                    <p class="font-light">Итоговая консультация.</p>
+                                </div>
+                            </div>
+                            <svg x-show="active_acc !== 'acc-09'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1"
+                                 stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                            </svg>
+                            <svg x-show="active_acc === 'acc-09'" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                 viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-16 group-hover:text-neutral-100 transition">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/>
+                            </svg>
+
+                            <button @click="active_acc = active_acc === 'acc-09' ? null : 'acc-09'"
+                                    class="absolute inset-0 z-20 cursor-pointer"></button>
+                        </div>
+                        <div x-show="active_acc === 'acc-09'" class="w-full py-6 ">
+                            <p class="text-[1.5rem]">
+                                Оценка работы над проектом. Обсуждение точек роста, стратегии доработки функционала и сопровождения проекта. Передача прав, лицензий, доступов.
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-800"></span>
+                            <div class="flex items-center justify-between uppercase text-neutral-800 text-sm">
+                                <p>О главном</p>
+                                <p>Калининград 2026</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="subtitle text-amber-200">
-                    <p>С ИИ и без ИИ —</p>
-                    <p>25 лет опыта.</p>
+            </div>
+        </section>
+        <section class="relative bg-[url('./images/bg1.png')] bg-cover bg-no-repeat">
+<!--            <div class="absolute inset-0 bg-[url('./images/bg1.png')] bg-cover bg-bottom bg-no-repeat"></div>-->
+            <img src="./images/pers-05.png" class="absolute top-0 right-0 h-full w-auto"/>
+            <div class="relative z-10 section py-20 flex flex-col w-full gap-10 z-10 text-neutral-800">
+                <span class="title-b tracking-wide text-neutral-800">От 10 000 ₽</span>
+                <span class="title-b tracking-wide">до долей</span>
+                <span class="title-b tracking-wide">в бизнесе.</span>
+            </div>
+        </section>
+        <section id="contacts" class="bg-[#fafafa] text-neutral-800">
+            <div class="relative section py-20 flex flex-col w-full gap-10 z-10">
+
+                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-800"></span>
+
+                <div class="flex items-start justify-between">
+                    <h1 class="title-b">Контакты</h1>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-10">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+                    </svg>
                 </div>
 
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="size-10 text-neutral-500">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
-                </svg>
-                <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-500"></span>
-                <div class="flex gap-10">
-                    <p id="sub-1" class="w-full">Если хотите быстро открыть как статическую страницу через локальный сервер</p>
-                    <p id="sub-2" class="w-full">Если хотите быстро открыть как статическую страницу через локальный сервер</p>
+                <div class="flex flex-col gap-2">
+                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-800"></span>
+                    <div class="flex items-center justify-between uppercase text-neutral-800 text-sm">
+                        <p>Все цифры — факты</p>
+                        <p>КАЛИНИНГРАД·PRO·2026</p>
+                    </div>
                 </div>
-                <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-500"></span>
             </div>
         </section>
 
-        <section class="bg-amber-200 min-h-[90vh]">
-            <div class="section py-20 flex flex-col w-full gap-10">
-
-            </div>
-        </section>
-
-        <section class="bg-blue-400 min-h-[90vh]">
-            <div class="section py-10 flex flex-col w-full h-screen gap-10 justify-between">
-                <h2 id="title-2" class="title-b text-neutral-50">Formatting Data</h2>
-                <!--            <p id="sub-1">Если хотите быстро открыть как статическую страницу через локальный сервер</p>-->
-                <!--            <p id="sub-2">Если хотите быстро открыть как статическую страницу через локальный сервер</p>-->
-                <p class="link">Если хотите быстро открыть как статическую страницу через локальный сервер</p>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25" />
-                </svg>
-                <div class="flex flex-col gap-8">
-                    <a class="link self-start pb-2 border-b border-neutral-50" href="#">Текст Ссылки</a>
-                    <button class="button self-start px-6 py-2 border border-neutral-50 cursor-pointer">Текст Кнопки
-                    </button>
-                </div>
-            </div>
-        </section>
+<!--        <section id="process" class="bg-blue-400 min-h-[90vh]">-->
+<!--            <div class="section py-10 flex flex-col w-full h-screen gap-10 justify-between">-->
+<!--                <div class="flex flex-col gap-2">-->
+<!--                    <div class="flex items-center justify-between uppercase text-neutral-100">-->
+<!--                        <p>О главном</p>-->
+<!--                        <p>Калининград 2026</p>-->
+<!--                    </div>-->
+<!--                    <span class="w-full min-h-[1px] max-h-[1px] bg-neutral-100"></span>-->
+<!--                </div>-->
+<!--                <h2 id="title-2" class="title-b text-neutral-100">Formatting Data</h2>-->
+<!--                <p class="link">Если хотите быстро открыть как статическую страницу через локальный сервер</p>-->
+<!--                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">-->
+<!--                  <path stroke-linecap="round" stroke-linejoin="round" d="m11.99 16.5-3.75 3.75m0 0L4.49 16.5m3.75 3.75V3.75h11.25" />-->
+<!--                </svg>-->
+<!--                <div class="flex flex-col gap-8">-->
+<!--                    <a class="link self-start pb-2 border-b border-neutral-100" href="#">Текст Ссылки</a>-->
+<!--                    <button class="button self-start px-6 py-2 border border-neutral-100 cursor-pointer">Текст Кнопки-->
+<!--                    </button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
 
     </div>
     <script>
@@ -148,7 +723,6 @@
                         mode: 'alt',
                         altTexts: [
                             'Если хотите быстро открыть как статическую страницу через локальный [ S E X ]',
-                            'Если [ S E X ] быстро открыть как статическую страницу через локальный сервер',
                             'Если хотите быстро открыть как [ S E X ] страницу через локальный сервер',
                         ],
                         minDelay: 300,
@@ -179,6 +753,21 @@
                         glitchCharset: '#%&?',
                         hoverInterval: 80,
                     },
+
+                    'stack-link': {
+                        type: 'hover',
+                        intensity: 0.4,
+                        glitchCharset: '#%&?',
+                        hoverInterval: 80,
+                    },
+
+                    'process-link': {
+                        type: 'hover',
+                        intensity: 0.4,
+                        glitchCharset: '#!&?*',
+                        hoverInterval: 80,
+                    },
+
                     'button': {
                         type: 'hover',
                         intensity: 0.4,
@@ -188,6 +777,7 @@
                 },
                 instances: {},
                 hoverInstances: [],
+                active_acc: null,
 
                 init() {
                     Object.entries(this.glitchItems).forEach(([key, rawConfig]) => {
